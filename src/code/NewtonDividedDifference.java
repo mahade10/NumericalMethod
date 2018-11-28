@@ -56,17 +56,18 @@ public class NewtonDividedDifference {
 	public static void main(String[] args){
 	    // number of inputs given 
 		NewtonDividedDifference ob = new NewtonDividedDifference();
-	    int n = 4; 
+	    int n = 5; 
 	    float value, sum; 
-	    float x[] = { 5, 6, 9, 11 }; 
+	    float x[] = { 2, 3, 6, 7,9 }; 
 	   float y[][]= new float [10][10];
 	  
 	    // y[][] is used for divided difference 
 	    // table where y[][0] is used for input 
-	    y[0][0] = 12; 
-	    y[1][0] = 13; 
-	    y[2][0] = 14; 
-	    y[3][0] = 16; 
+	    y[0][0] = 15; 
+	    y[1][0] = 39; 
+	    y[2][0] = 243; 
+	    y[3][0] = 375;
+	    y[4][0] = 771;
 	  
 	    // calculating divided difference table 
 	    ob.dividedDiffTable(x, y, n); 
@@ -75,12 +76,12 @@ public class NewtonDividedDifference {
 	    ob.printDiffTable(y,n); 
 	  
 	    // value to be interpolated 
-	    value = 7; 
+	    value = 5; 
 	  
 	    // printing the value 
 	   // cout << "\nValue at " << value << " is "
 	              // << applyFormula(value, x, y, n) << endl; 
-	    System.out.println(value+ "is "+ob.applyFormula(value,x,y,n));
+	    System.out.println(value+ " is :"+ob.applyFormula(value,x,y,n));
 	} 
 
 }
